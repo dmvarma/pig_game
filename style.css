@@ -160,4 +160,18 @@ i {
 }
 
 .winner { background-color: #f7f7f7; }
-.winner .player-name { font-weight: 300; color: #EB4D4D; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; } 
+
+
+.newgame{
+    
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+}

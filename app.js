@@ -18,6 +18,9 @@ document.getElementById('score-1').textContent = '0';
 document.getElementById('current-0').textContent = '0';
 document.getElementById('current-1').textContent = '0';
 document.querySelector('.dice').style.display = 'none';
+document.querySelector('.newgame').style.visibility = 'hidden'; 
+
+
 
 document.querySelector('.btn-roll').addEventListener('click', function () {
     dice = Math.floor(Math.random() * 6) + 1;
@@ -30,6 +33,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!!!';
         document.querySelector('.btn-roll').disabled = true;
         document.querySelector('.btn-hold').disabled = true;
+        document.querySelector('.newgame').style.visibility = 'visible'; 
     }
     if (dice !== 1) {
         roundScore += dice;
@@ -55,6 +59,8 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
     document.querySelector('.dice').style.display = 'none';
+    
+    
 });
 
 document.querySelector('.btn-new').addEventListener('click', function () {
@@ -76,5 +82,6 @@ document.querySelector('.btn-new').addEventListener('click', function () {
     document.querySelector('.dice').style.display = 'none';
     document.querySelector('.btn-roll').disabled = false;
     document.querySelector('.btn-hold').disabled = false;
+    document.getElementById('newgame').style.visibility = "hidden"; 
 
 });
