@@ -29,11 +29,13 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
     diceDOM.style.display = 'block';
     diceDOM.src = 'dice-' + dice + '.png';
     if ((scores[activePlayer] + roundScore + dice) >= 100) {
+        
+         document.querySelector('.newgame').style.visibility = 'visible'; 
         document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!!!';
         document.querySelector('.btn-roll').disabled = true;
         document.querySelector('.btn-hold').disabled = true;
-        document.querySelector('.newgame').style.visibility = 'visible'; 
+       
     }
     if (dice !== 1) {
         roundScore += dice;
