@@ -12,17 +12,13 @@ var scores, roundScore, activePlayer, dice;
 scores = [0, 0];
 roundScore = 0;
 activePlayer = 0;
-//   console.log(i,dice,i);
-//  document.querySelector("#current-" + activePlayer).textContent = dice;
-//document.querySelector('#score-0').innerHTML = '<em>' + dice + "</em>";
-//console.log(x,typeof(x));
-//Init clear all global variables
+
 document.getElementById('score-0').textContent = '0';
 document.getElementById('score-1').textContent = '0';
 document.getElementById('current-0').textContent = '0';
 document.getElementById('current-1').textContent = '0';
 document.querySelector('.dice').style.display = 'none';
-//Button roll even listner
+
 document.querySelector('.btn-roll').addEventListener('click', function () {
     dice = Math.floor(Math.random() * 6) + 1;
     console.log(dice);
@@ -60,6 +56,7 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
     document.querySelector('.player-1-panel').classList.toggle('active');
     document.querySelector('.dice').style.display = 'none';
 });
+
 document.querySelector('.btn-new').addEventListener('click', function () {
     scores = [0, 0];
     roundScore = 0;
@@ -69,17 +66,15 @@ document.querySelector('.btn-new').addEventListener('click', function () {
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
     document.querySelector('.dice').style.display = 'none';
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+    
+    document.getElementById('name-0').textContent = 'PLAYER 1';
+    document.getElementById('name-1').textContent = 'PLAYER 2';
     document.querySelector('.player-0-panel').classList.toggle('active', true);
     document.querySelector('.player-1-panel').classList.toggle('active', false);
     document.querySelector('.dice').style.display = 'none';
     document.querySelector('.btn-roll').disabled = false;
     document.querySelector('.btn-hold').disabled = false;
-    
-    document.querySelector('.player-0-panel').classList.remove('winner');
-    document.querySelector('.player-1-panel').classList.remove('winner');
-    /*
-    document.querySelector('.player-0-panel').classList.remove('active');
-    document.querySelector('.player-1-panel').classList.remove('active');
-    document.querySelector('.player-0-panel').classList.add('active');
-    */
+
 });
