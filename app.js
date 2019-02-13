@@ -35,6 +35,7 @@ document.querySelector('.btn-roll').addEventListener('click', function () {
         document.querySelector('#name-' + activePlayer).textContent = 'Winner!!!';
         document.querySelector('.btn-roll').disabled = true;
         document.querySelector('.btn-hold').disabled = true;
+        document.querySelector('.btn-new').focus();
        
     }
     if (dice !== 1) {
